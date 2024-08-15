@@ -1,17 +1,21 @@
 function volume_sphere() {
 	 //Write your code here
-	let radius=document.getElementById("radius");
-	let volume=document.getElementById("volume");
-	 radius=radius.value;
-	 volume=(4*Math.PI*radius*radius)/3;
-	volume.innertext=volume;
+	 let radius=parseFloat(document.getElementById("radius").value);
+     let vol=document.getElementById("volume");
+      if (isNaN(radius) || radius < 0) {
+       vol.innerText="NaN";
+    } else {
+        let volume = (4/3) * Math.PI * Math.pow(radius, 3);
+        vol.innerText=volume;
+    }
+    
+	 
 	
 	
 	
 	
   
 }    
-   let submit=document.getElementById("submit");
-    submit.addEventListener("click",volume_sphere);
+  
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
