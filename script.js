@@ -6,7 +6,7 @@ function volume_sphere() {
        volume.value="NaN";
     } else {
        
-        volume.value=((4/3) * Math.PI * Math.pow(radius, 3)).toFixed(4);
+        volume.value=volume.value = parseFloat(((4/3) * Math.PI * Math.pow(radius, 3)).toFixed(4));
     }
     
 	 
